@@ -1,16 +1,9 @@
 "use client";
 
-import {
-  IKImage,
-  IKVideo,
-  ImageKitProvider,
-  IKUpload,
-  ImageKitContext,
-} from "imagekitio-next";
+import { IKImage, ImageKitProvider, IKUpload } from "imagekitio-next";
 import config from "@/lib/config";
 import { useRef, useState } from "react";
 import Image from "next/image";
-import { FilePath } from "tailwindcss/types/config";
 import { toast } from "@/hooks/use-toast";
 
 const {
