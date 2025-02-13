@@ -1,12 +1,12 @@
 "use server";
 
-import { signIn } from "@/auth";
+import { eq } from "drizzle-orm";
 import { db } from "@/database/drizzle";
 import { users } from "@/database/schema";
-import ratelimit from "@/ratelimit";
 import { hash } from "bcryptjs";
-import { eq } from "drizzle-orm";
+import { signIn } from "@/auth";
 import { headers } from "next/headers";
+import ratelimit from "@/lib/ratelimit";
 import { redirect } from "next/navigation";
 
 export const signInWithCredentials = async (
@@ -45,7 +45,6 @@ export const signUp = async (params: AuthCredentials) => {
 
   if (!success) return redirect("/too-fast");
 
-  // Check if the user already exists
   const existingUser = await db
     .select()
     .from(users)

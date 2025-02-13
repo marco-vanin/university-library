@@ -25,8 +25,8 @@ const Layout = async ({ children }: { children: ReactNode }) => {
         <Image
           src="/images/auth-illustration.png"
           alt="auth illustration"
-          width={1000}
           height={1000}
+          width={1000}
           className="size-full object-cover"
         />
       </section>

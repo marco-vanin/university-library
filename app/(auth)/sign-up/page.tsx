@@ -1,8 +1,8 @@
 "use client";
 
 import AuthForm from "@/components/AuthForm";
-import { signUp } from "@/lib/actions/auth";
 import { signUpSchema } from "@/lib/validation";
+import { signUp } from "@/lib/actions/auth";
 
 const Page = () => (
   <AuthForm
@@ -18,4 +18,5 @@ const Page = () => (
     onSubmit={signUp}
   />
 );
+
 export default Page;
