@@ -38,6 +38,8 @@ const BorrowBook = ({
     try {
       const result = await borrowBook({ bookId, userId });
 
+      console.log(result);
+
       if (result.success) {
         toast({
           title: "Success",
@@ -48,14 +50,14 @@ const BorrowBook = ({
       } else {
         toast({
           title: "Error",
-          description: result.error,
+          description: result.message,
           variant: "destructive",
         });
       }
     } catch (error) {
       toast({
         title: "Error",
-        description: "An error occurred while borrowing the book",
+        description: `An error occurred while borrowing the book ${error}`,
         variant: "destructive",
       });
     } finally {
