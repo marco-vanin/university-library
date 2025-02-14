@@ -36,6 +36,13 @@
       "when": 1739552022632,
       "tag": "0004_next_callisto",
       "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1739553585561,
+      "tag": "0005_clever_hellfire_club",
+      "breakpoints": true
     }
   ]
 }
