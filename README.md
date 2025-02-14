@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+---
 
-First, run the development server:
+# 📚 Système de Gestion de Bibliothèque Universitaire  
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Bienvenue dans ce projet de gestion de bibliothèque universitaire ! Ce projet a été réalisé avec **Next.js**, **TypeScript** et **PostgreSQL**, et inclut une interface administrateur pour une gestion optimisée.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🗂️ Table des matières  
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- [📚 Système de Gestion de Bibliothèque Universitaire](#-système-de-gestion-de-bibliothèque-universitaire)
+  - [🗂️ Table des matières](#️-table-des-matières)
+  - [🤖 Introduction](#-introduction)
+  - [⚙️ Technologies Utilisées](#️-technologies-utilisées)
+  - [🔋 Fonctionnalités](#-fonctionnalités)
+  - [🎓 Crédits](#-crédits)
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🤖 Introduction  
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Ce projet est une application complète qui permet de gérer une bibliothèque avec des fonctionnalités avancées telles que l'emprunt de livres avec des rappels automatisés, la gestion des utilisateurs, des workflows automatisés et une interface utilisateur moderne. Idéal pour la démonstration de compétences Full Stack.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## ⚙️ Technologies Utilisées  
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Next.js** : Framework de développement moderne pour React.  
+- **PostgreSQL** : Base de données relationnelle robuste.  
+- **Upstash Redis** : Caching et triggers en temps réel.  
+- **TypeScript** : Pour un typage et une maintenance simplifiée du code.  
+- **Tailwind CSS** : Framework CSS utilitaire pour une UI moderne et rapide.  
+- **ImageKit** : Gestion et optimisation des médias.  
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 🔋 Fonctionnalités  
+
+Voici un aperçu des fonctionnalités intégrées :  
+
+- **Page d'accueil** : Présentation des nouveautés et livres en avant.  
+- **Pages détaillées des livres** : Disponibilité, résumés et recommandations.  
+- **Interface utilisateur** : Gestion de l'utilisateur et téléchargement des reçus d'emprunt.  
+- **Dashboard admin** : Statistiques, gestion des utilisateurs et des emprunts.  
+- **Gestion des rôles** : Attribution et gestion des permissions utilisateur.  
+- **Performance optimisée** : Mise en cache et protection contre les attaques DDoS.  
+
+---
+
+## 🎓 Crédits  
+
+Inspiré par [Tutoriel Original](https://www.youtube.com/watch?v=EZajJGOMWas).
+
+---
