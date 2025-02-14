@@ -10,7 +10,12 @@ CREATE TABLE "books" (
 	"total_copies" integer DEFAULT 1 NOT NULL,
 	"available_copies" integer DEFAULT 0 NOT NULL,
 	"video_url" text NOT NULL,
-	"summary" varchar(255) NOT NULL,
+	"summary" text NOT NULL,
 	"created_at" timestamp with time zone DEFAULT now(),
 	CONSTRAINT "books_id_unique" UNIQUE("id")
 );
+--> statement-breakpoint
+ALTER TABLE "public"."users" ALTER COLUMN "status" SET DATA TYPE text;--> statement-breakpoint
+DROP TYPE "public"."status";--> statement-breakpoint
+CREATE TYPE "public"."status" AS ENUM('PENDING', 'APPROVED', 'REJECTED');--> statement-breakpoint
+ALTER TABLE "public"."users" ALTER COLUMN "status" SET DATA TYPE "public"."status" USING "status"::"public"."status";

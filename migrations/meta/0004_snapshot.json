@@ -1,5 +1,5 @@
 {
-  "id": "b8e4c6b1-e824-4bd5-9999-b8b70b4c815a",
+  "id": "043c3496-3d9b-4f30-8702-66e0e5162e43",
   "prevId": "dd1f496b-2bb7-48a5-8f4f-3f0b419ac8f9",
   "version": "7",
   "dialect": "postgresql",
@@ -79,7 +79,7 @@
         },
         "summary": {
           "name": "summary",
-          "type": "varchar(255)",
+          "type": "text",
           "primaryKey": false,
           "notNull": true
         },
@@ -232,7 +232,7 @@
       "schema": "public",
       "values": [
         "PENDING",
-        "APPROUVED",
+        "APPROVED",
         "REJECTED"
       ]
     }

@@ -8,10 +8,9 @@ import {
   pgEnum,
   timestamp,
 } from "drizzle-orm/pg-core";
-
 export const STATUS_ENUM = pgEnum("status", [
   "PENDING",
-  "APPROUVED",
+  "APPROVED",
   "REJECTED",
 ]);
 export const ROLE_ENUM = pgEnum("role", ["USER", "ADMIN"]);
@@ -30,7 +29,9 @@ export const users = pgTable("users", {
   status: STATUS_ENUM("status").default("PENDING"),
   role: ROLE_ENUM("role").default("USER"),
   lastActivityDate: date("last_activity_date").defaultNow(),
-  createdAt: timestamp("created_at", { withTimezone: true }).defaultNow(),
+  createdAt: timestamp("created_at", {
+    withTimezone: true,
+  }).defaultNow(),
 });
 
 export const books = pgTable("books", {
@@ -45,6 +46,6 @@ export const books = pgTable("books", {
   totalCopies: integer("total_copies").notNull().default(1),
   availableCopies: integer("available_copies").notNull().default(0),
   videoUrl: text("video_url").notNull(),
-  summary: varchar("summary").notNull(),
+  summary: text("summary").notNull(),
   createdAt: timestamp("created_at", { withTimezone: true }).defaultNow(),
 });
